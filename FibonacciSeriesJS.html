@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+    <script>
+    //Generate Fibonacci Sequence (0, 1, 1, 2, 3, 5, 8, 13, 21
+    
+    document.write("<H1>Fibonacci Series JS<br><br>")
+    let n = Number(prompt("Enter the Numnber of Terms you want: "));
+    let a = 0;
+    let b = 1;
+
+    for(let i=0;i<=n;i++){
+        document.write(`${a} `);
+        let nextTerm = a + b;
+        a = b;
+        b = nextTerm;
+    }
+    </script>
+</body>
+</html>

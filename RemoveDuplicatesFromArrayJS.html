@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Remove Duplicates From Array JS Program</h1>");
+        let n = Number(prompt("How many Elements you want in an Array?: "));
+        let arr = [];
+        for (let i = 0; i < n; i++) {
+            arr[i] = Number(prompt("Enter the Array Element at Index: " + i + " = "));
+        }
+
+        let pointer = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            
+            let isDuplicate = false;
+
+            for (let j = 0; j < pointer; j++) {
+                if (arr[i] === arr[j]) {
+                    isDuplicate = true;
+                    break; 
+                }
+            }
+
+            if (isDuplicate==false) {
+                arr[pointer] = arr[i]; 
+                pointer++;
+            }
+        }
+
+        document.write("<h3>Array with Duplicates Removed:</h3>");
+        for (let i = 0; i < pointer; i++) {
+            document.write(arr[i] + " ");
+        }
+    </script>
+</body>
+</html>
